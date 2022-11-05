@@ -1,0 +1,333 @@
+@font-face {
+    font-family: 'Mitr';
+    src: url('../resources/fonts/Mitr-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Mitr';
+    font-weight: bold;
+    src: url('../resources/fonts/Mitr-Bold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Mitr';
+    font-weight: 300;
+    src: url('../resources/fonts/Mitr-Light.ttf') format('truetype');
+}
+
+
+body {
+    font-family: "Mitr" !important;
+    color: grey;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+}
+
+html {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    /* background-image: url('../resources/imgs/background.jpg'); */
+    background-color: lightblue;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.default-margin {
+    margin-left: 4em;
+    margin-right: 4em;
+    margin-top: 5em;
+}
+
+.section {
+    padding: 2em;
+    background-color: rgb(229, 236, 241);
+    border-radius: 0.4em;
+}
+
+input[type=submit] {
+    background-color: rgb(175, 175, 175);
+    padding-top: 1em;
+    padding-bottom: 1em;
+    cursor: pointer;
+    border: none;
+    color: white;
+}
+
+.link-button {
+    display: inline-block;
+    padding: 0.5em !important;
+    margin: 0.1em !important;
+    width: auto;
+    background: none !important;
+    border: none !important;
+    color: grey !important;
+    text-decoration: none !important;
+}
+
+
+#top-navbar {
+    position: fixed;
+    top: 0;
+    left: 3em;
+    right: 3em;
+    overflow: hidden;
+    padding-top: 10px;
+}
+
+#top-navbar button,
+#top-navbar a {
+    display: inline-block;
+    padding: 0.75em;
+    margin-left: 0.5em;
+}
+
+button,
+a {
+    color: rgb(97, 97, 97);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: transparent;
+    text-decoration: none;
+    font-size: 0.8em;
+    width: auto;
+    border: none;
+    cursor: pointer;
+    border-radius: 0.5em;
+    padding: 0.75em;
+}
+
+.selected {
+    background-color: #555 !important;
+    color: white !important;
+}
+
+.selected-grey {
+    background-color: rgb(240, 240, 240) !important;
+}
+
+button:hover,
+a:hover {
+    color: gray;
+}
+
+.loader {
+    border: 0.5em solid #fff;
+    border-top: 0.5em solid #e64c3a;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 2s linear infinite;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    margin-left: -50px;
+    margin-top: -50px;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    height: 8%;
+    box-sizing: border-box;
+    padding: 1em;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    background-color: rgb(241, 241, 241);
+    border-radius: 0.5em;
+    border: none;
+    -webkit-appearance:none;
+}
+
+input:not([type=submit]):focus,
+select:focus {
+    outline: none !important;
+    border: 0.2em solid lightblue;
+}
+
+label {
+    display: inline-block;
+}
+
+.popup {
+    background: #fff;
+    overflow: hidden;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    min-width: 20%;
+    max-height: 90%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    transition: all 1s ease-in-out;
+    border-radius: 0.3em;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+
+.popup-content {
+    padding-left: 2vw;
+    padding-right: 2vw;
+    padding-top: 2em;
+    padding-bottom: 2em;
+    overflow-y: scroll;
+    font-size: 0.75em;
+    flex: 1;
+    text-align: center;
+}
+
+.popup-exit-button {
+    float: right;
+    text-decoration: none;
+    color: grey;
+    font-size: 1.5em;
+    padding: 0;
+}
+
+.popup a:hover {
+    opacity: 0.5;
+}
+
+.error-message {
+    background-color: #e64c3a;
+    color: white;
+    padding: 1em;
+}
+
+.popup .header {
+    background-color: rgb(240, 240, 240);
+    overflow: hidden;
+    color: grey;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    padding-left: 1em;
+    padding-right: 1em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.dialog-title {
+    font-size: 2em;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.overlay:target {
+    display: block;
+}
+
+form .error {
+    margin: 0;
+    margin-top: 0.2em;
+    color: #e64c3a;
+}
+
+form .error:before {
+    font-weight: bold;
+    content: "\0026A0 \00a0";
+}
+
+
+#sidebar {
+    position: fixed !important;
+    overflow: auto;
+    height: 100%;
+    width: 30%;
+    background-color: #eeeeee;
+    left: 0;
+    top: 0;
+    z-index: 2;
+    display: none;
+}
+
+#sidebar a {
+    display: block;
+    margin: 1em;
+
+}
+
+#sidebar-close-button {
+    font-size: 2em;
+}
+
+#sidebar-header {
+    background-color: #ddd;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 1em;
+    padding-right: 1em;
+    align-self: center;
+    align-items: center;
+}
+
+.warning {
+    background-color: rgba(0, 0, 0, 0.04);
+    width: 60%;
+    color: rgb(145, 145, 145);
+    border-radius: 1vw;
+    padding-left: 2em;
+    padding-right: 2em;
+    text-align: start;
+    margin: 0 auto;
+    margin-top: 2em;
+    font-size: 1.5vh;
+    display: flex;
+    line-height: 1.5vh;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+#game-over-login-button {
+    background-image: url('../resources/imgs/login.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 30%;
+    background-color: rgb(165, 165, 165);
+}
+
+#sidebar-open-button {
+    margin-right: 1em;
+}
+
+#pageContent {
+    width: 100%;
+    height: 100%;
+}
+
+.close-dialog {
+    float: right;
+}
+
+.center{
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
