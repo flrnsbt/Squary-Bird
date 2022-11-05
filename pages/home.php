@@ -73,7 +73,7 @@
         </div>
     </div>
     <div class="row footer">
-        <a href="https://github.com/flrnsbt" >
+        <a href="https://github.com/flrnsbt/Squary-Bird" >
             <ion-icon size="large" style='color: #13a2ce; float: left; margin-right: 5px;' name="logo-github"></ion-icon>
             <p>Github</p>
         </a>
